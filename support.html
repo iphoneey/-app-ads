@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدعم — ADEL ABDULLAH</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0a0a0a;
+    --surface: #111111;
+    --surface2: #1a1a1a;
+    --border: #2a2a2a;
+    --text: #ffffff;
+    --text2: #888888;
+    --text3: #555555;
+    --purple: #7c3aed;
+    --purple2: #a78bfa;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    direction: rtl;
+  }
+
+  /* Nav */
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    position: sticky; top: 0; z-index: 10;
+  }
+
+  .nav-logo {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none; color: var(--text);
+    font-weight: 700; font-size: 15px;
+  }
+
+  .nav-logo svg { width: 32px; height: 35px; }
+
+  .nav-back {
+    color: var(--purple2); text-decoration: none;
+    font-size: 13px; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: white; }
+
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+    position: relative; overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; left: 50%; transform: translateX(-50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(124,58,237,0.1);
+    border: 1px solid rgba(124,58,237,0.3);
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 12px; color: var(--purple2);
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-size: 36px; font-weight: 800; letter-spacing: -1px;
+    background: linear-gradient(135deg, #ffffff 0%, #888888 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+  }
+
+  .hero p { font-size: 15px; color: var(--text2); }
+
+  /* Content */
+  .content {
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  /* Support cards */
+  .support-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .support-card:hover { border-color: var(--purple); }
+
+  .support-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--purple), #4f46e5, var(--purple));
+  }
+
+  .card-header {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  .card-icon {
+    width: 48px; height: 48px;
+    border-radius: 14px;
+    background: rgba(124,58,237,0.15);
+    border: 1px solid rgba(124,58,237,0.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; flex-shrink: 0;
+  }
+
+  .card-title { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+  .card-sub   { font-size: 13px; color: var(--text2); }
+
+  .card-body  { font-size: 14px; color: var(--text2); line-height: 1.7; margin-bottom: 20px; }
+
+  .card-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--purple);
+    border: none; border-radius: 12px;
+    padding: 11px 22px;
+    color: white; font-size: 14px; font-weight: 600;
+    font-family: inherit; cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .card-btn:hover {
+    background: #6d28d9;
+    box-shadow: 0 0 20px rgba(124,58,237,0.4);
+    transform: translateY(-1px);
+  }
+
+  .card-btn.outline {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text2);
+  }
+  .card-btn.outline:hover {
+    border-color: var(--purple);
+    color: white;
+    box-shadow: none;
+  }
+
+  .divider {
+    text-align: center;
+    color: var(--text3);
+    font-size: 12px;
+    margin: 8px 0;
+  }
+
+  /* Response time */
+  .response-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(16,185,129,0.1);
+    border: 1px solid rgba(16,185,129,0.2);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 12px; color: #34d399;
+    margin-top: 12px;
+  }
+
+  .response-badge span {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #34d399; display: inline-block;
+    animation: blink 2s infinite;
+  }
+
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  /* Steps */
+  .steps { margin-top: 8px; }
+  .step {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .step:last-child { border-bottom: none; }
+
+  .step-num {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: rgba(124,58,237,0.15);
+    border: 1px solid rgba(124,58,237,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; color: var(--purple2);
+    flex-shrink: 0; margin-top: 1px;
+  }
+
+  .step-text { font-size: 13px; color: var(--text2); line-height: 1.6; }
+  .step-text strong { color: var(--text); }
+
+  /* Footer */
+  footer {
+    text-align: center; padding: 24px 20px;
+    color: var(--text3); font-size: 12px;
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--text2); text-decoration: none; }
+  footer a:hover { color: var(--text); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg viewBox="0 0 110 120" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="ng" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#7c3aed"/>
+          <stop offset="100%" style="stop-color:#4f46e5"/>
+        </linearGradient>
+      </defs>
+      <path d="M55,4 L100,24 L100,60 Q100,96 55,114 Q10,96 10,60 L10,24 Z" fill="url(#ng)"/>
+      <text x="55" y="66" font-family="Inter,-apple-system,sans-serif" font-size="22" font-weight="800" fill="white" text-anchor="middle">AA</text>
+    </svg>
+    ADEL ABDULLAH
+  </a>
+  <a class="nav-back" href="index.html">← العودة</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">🛟 الدعم الفني</div>
+  <h1>كيف نقدر نساعدك؟</h1>
+  <p>فريق الدعم جاهز للمساعدة</p>
+</div>
+
+<div class="content">
+
+  <!-- Email Support -->
+  <div class="support-card">
+    <div class="card-header">
+      <div class="card-icon">📧</div>
+      <div>
+        <div class="card-title">الدعم عبر البريد الإلكتروني</div>
+        <div class="card-sub">الطريقة الأسرع للحصول على مساعدة</div>
+      </div>
+    </div>
+    <div class="card-body">
+      أرسل لنا وصفاً لمشكلتك مع ذكر اسم التطبيق ورقم الإصدار، وسنرد عليك في أقرب وقت ممكن.
+    </div>
+    <a class="card-btn" href="mailto:iphoneey@hotmail.com?subject=طلب دعم فني">
+      📧 راسلنا الآن
+    </a>
+    <div class="response-badge">
+      <span></span> وقت الرد خلال 24-48 ساعة
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="support-card">
+    <div class="card-header">
+      <div class="card-icon">✉️</div>
+      <div>
+        <div class="card-title">نموذج التواصل</div>
+        <div class="card-sub">أرسل رسالتك مباشرة من الموقع</div>
+      </div>
+    </div>
+    <div class="card-body">
+      يمكنك إرسال رسالتك من خلال نموذج التواصل وسيصلنا طلبك فوراً.
+    </div>
+    <a class="card-btn outline" href="contact.html">
+      ✉️ نموذج التواصل
+    </a>
+  </div>
+
+  <!-- How to get support -->
+  <div class="support-card">
+    <div class="card-header">
+      <div class="card-icon">📋</div>
+      <div>
+        <div class="card-title">كيف تحصل على دعم أسرع؟</div>
+        <div class="card-sub">اتبع هذي الخطوات لنساعدك بشكل أفضل</div>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>اذكر اسم التطبيق</strong> — اكتب اسم التطبيق اللي تواجه فيه المشكلة</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>صف المشكلة بوضوح</strong> — وضّح وش يصير وكيف تكررت المشكلة</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>ذكر إصدار iOS</strong> — مثلاً iOS 17.4 على iPhone 15</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text"><strong>أرفق صورة إن أمكن</strong> — تساعدنا نفهم المشكلة أسرع</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- App Store -->
+  <div class="support-card">
+    <div class="card-header">
+      <div class="card-icon">🍎</div>
+      <div>
+        <div class="card-title">تقييم على App Store</div>
+        <div class="card-sub">رأيك يهمنا ويساعدنا نتحسن</div>
+      </div>
+    </div>
+    <div class="card-body">
+      إذا أعجبك التطبيق، تقييمك على App Store يساعدنا كثيراً في تطوير تجربة أفضل لك.
+    </div>
+    <a class="card-btn outline" href="https://apps.apple.com/sa/developer/adel-abdullah/id390109349?l=ar" target="_blank">
+      ⭐ تطبيقاتنا على App Store
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 <a href="index.html">Adel Abdullah</a> — All rights reserved
+</footer>
+
+</body>
+</html>

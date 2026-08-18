@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سياسة الخصوصية — ADEL ABDULLAH</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0a0a0a;
+    --surface: #111111;
+    --surface2: #1a1a1a;
+    --border: #2a2a2a;
+    --text: #ffffff;
+    --text2: #888888;
+    --text3: #555555;
+    --purple: #7c3aed;
+    --purple2: #a78bfa;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    direction: rtl;
+  }
+
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    position: sticky; top: 0; z-index: 10;
+  }
+
+  .nav-logo {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none; color: var(--text);
+    font-weight: 700; font-size: 15px;
+  }
+
+  .nav-logo svg { width: 32px; height: 35px; }
+
+  .nav-back {
+    color: var(--purple2); text-decoration: none;
+    font-size: 13px; font-weight: 500; transition: color 0.2s;
+  }
+  .nav-back:hover { color: white; }
+
+  .hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+    position: relative; overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; left: 50%; transform: translateX(-50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(124,58,237,0.1);
+    border: 1px solid rgba(124,58,237,0.3);
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 12px; color: var(--purple2);
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-size: 36px; font-weight: 800; letter-spacing: -1px;
+    background: linear-gradient(135deg, #ffffff 0%, #888888 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+  }
+
+  .hero p { font-size: 14px; color: var(--text3); }
+
+  .content {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  .section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .section:hover { border-color: #3a3a3a; }
+
+  .section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--purple), #4f46e5, var(--purple));
+  }
+
+  .section-header {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .section-icon {
+    width: 40px; height: 40px;
+    border-radius: 12px;
+    background: rgba(124,58,237,0.15);
+    border: 1px solid rgba(124,58,237,0.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; flex-shrink: 0;
+  }
+
+  .section-title { font-size: 16px; font-weight: 700; color: var(--text); }
+
+  .section-body {
+    font-size: 14px; color: var(--text2);
+    line-height: 1.8;
+  }
+
+  .section-body ul {
+    margin: 10px 0 0 0;
+    padding-right: 20px;
+  }
+
+  .section-body ul li {
+    margin-bottom: 8px;
+    color: var(--text2);
+  }
+
+  .section-body ul li strong { color: var(--text); }
+
+  .contact-box {
+    background: rgba(124,58,237,0.08);
+    border: 1px solid rgba(124,58,237,0.2);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 16px;
+    font-size: 13px; color: var(--purple2);
+    text-align: center;
+  }
+
+  .contact-box a { color: var(--purple2); }
+
+  .update-date {
+    text-align: center;
+    font-size: 12px; color: var(--text3);
+    margin-bottom: 20px;
+  }
+
+  footer {
+    text-align: center; padding: 24px 20px;
+    color: var(--text3); font-size: 12px;
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--text2); text-decoration: none; }
+  footer a:hover { color: var(--text); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg viewBox="0 0 110 120" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="ng" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#7c3aed"/>
+          <stop offset="100%" style="stop-color:#4f46e5"/>
+        </linearGradient>
+      </defs>
+      <path d="M55,4 L100,24 L100,60 Q100,96 55,114 Q10,96 10,60 L10,24 Z" fill="url(#ng)"/>
+      <text x="55" y="66" font-family="Inter,-apple-system,sans-serif" font-size="22" font-weight="800" fill="white" text-anchor="middle">AA</text>
+    </svg>
+    ADEL ABDULLAH
+  </a>
+  <a class="nav-back" href="index.html">← العودة</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">🔒 سياسة الخصوصية</div>
+  <h1>Privacy Policy</h1>
+  <p>آخر تحديث: يناير 2025</p>
+</div>
+
+<div class="content">
+
+  <div class="update-date">تسري هذه السياسة على جميع تطبيقات Adel Abdullah على App Store</div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📋</div>
+      <div class="section-title">مقدمة</div>
+    </div>
+    <div class="section-body">
+      نحن في Adel Abdullah نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية. توضح هذه السياسة كيفية تعاملنا مع المعلومات عند استخدامك لتطبيقاتنا على App Store.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📊</div>
+      <div class="section-title">المعلومات التي نجمعها</div>
+    </div>
+    <div class="section-body">
+      قد تجمع تطبيقاتنا الأنواع التالية من البيانات:
+      <ul>
+        <li><strong>بيانات الاستخدام</strong> — كيفية استخدامك للتطبيق وميزاته</li>
+        <li><strong>بيانات الجهاز</strong> — نوع الجهاز، إصدار نظام التشغيل</li>
+        <li><strong>بيانات الإعلانات</strong> — من خلال Google AdMob لعرض إعلانات مناسبة</li>
+        <li><strong>تقارير الأعطال</strong> — لتحسين أداء التطبيق واستقراره</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🎯</div>
+      <div class="section-title">كيف نستخدم المعلومات</div>
+    </div>
+    <div class="section-body">
+      نستخدم البيانات المجمعة للأغراض التالية:
+      <ul>
+        <li>تحسين أداء التطبيقات وتجربة المستخدم</li>
+        <li>عرض إعلانات ملائمة عبر Google AdMob</li>
+        <li>تحليل الأعطال وإصلاح المشكلات التقنية</li>
+        <li>تطوير ميزات وتحديثات جديدة</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🤝</div>
+      <div class="section-title">مشاركة البيانات مع أطراف ثالثة</div>
+    </div>
+    <div class="section-body">
+      لا نبيع بياناتك الشخصية لأي طرف ثالث. قد نشارك بيانات محدودة مع:
+      <ul>
+        <li><strong>Google AdMob</strong> — لعرض الإعلانات داخل التطبيقات</li>
+        <li><strong>Apple</strong> — وفقاً لسياسة App Store</li>
+        <li><strong>خدمات التحليل</strong> — لتحسين أداء التطبيقات</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🔒</div>
+      <div class="section-title">أمان البيانات</div>
+    </div>
+    <div class="section-body">
+      نتخذ إجراءات أمنية مناسبة لحماية بياناتك من الوصول غير المصرح به أو الإفصاح أو التعديل أو الحذف. جميع البيانات مشفرة أثناء النقل والتخزين.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">👶</div>
+      <div class="section-title">خصوصية الأطفال</div>
+    </div>
+    <div class="section-body">
+      تطبيقاتنا غير موجهة للأطفال دون سن 13 عاماً. لا نجمع بيانات شخصية عن قصد من الأطفال. إذا اكتشفنا أننا جمعنا بيانات طفل دون موافقة الوالدين، نحذفها فوراً.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">⚙️</div>
+      <div class="section-title">حقوقك</div>
+    </div>
+    <div class="section-body">
+      يحق لك في أي وقت:
+      <ul>
+        <li>طلب الاطلاع على بياناتك الشخصية</li>
+        <li>طلب تصحيح أو حذف بياناتك</li>
+        <li>إيقاف الإعلانات المخصصة من إعدادات الجهاز</li>
+        <li>حذف التطبيق لإيقاف جمع البيانات</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🔄</div>
+      <div class="section-title">تحديثات السياسة</div>
+    </div>
+    <div class="section-body">
+      قد نحدث سياسة الخصوصية هذه من وقت لآخر. سنخطرك بأي تغييرات جوهرية عبر تحديث التطبيق أو الإشعارات. استمرارك في استخدام التطبيق بعد التحديث يعني موافقتك على السياسة الجديدة.
+      <div class="contact-box">
+        لأي استفسار تواصل معنا على:
+        <br><br>
+        <a href="mailto:iphoneeyapps@gmail.com">iphoneeyapps@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 <a href="index.html">Adel Abdullah</a> — All rights reserved
+</footer>
+
+</body>
+</html>
